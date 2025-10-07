@@ -1,0 +1,23 @@
+docker build -t cmr-api . (to build docker)
+
+docker stop cmr-api
+
+docker rm cmr-api
+
+docker run -d --name cmr-api -p 5000:5000 cmr-api
+
+docker ps (to get info about running docker)
+ 
+
+curl -X POST http://127.0.0.1:5000/predict -F "file=@C:\main\VScode\cmr_api\img\sample.pdf"
+
+curl -X POST http://127.0.0.1:5000/predict -F "file=@C:\main\VScode\cmr_api\img\0000ac8a7a5c3960a4518e810192f6d2.jpg"
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  web:
+    image: your-main-web-image   
+    ports:
+      - "8000:8000"              
+    depends_on:
+      - cmr-api
+    networks:
+      - appnet
+
+  cmr-api:
+    build: .
+    container_name: cmr-api
+    ports:
+      - "5000:5000"           
+    networks:
+      - appnet
+
+networks:
+  appnet:
+    driver: bridge

@@ -1,0 +1,8 @@
+flask
+onnxruntime
+numpy
+opencv-python-headless
+pillow
+pdf2image
+python-docx
+docx2pdf
